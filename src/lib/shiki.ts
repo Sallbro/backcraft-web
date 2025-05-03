@@ -22,7 +22,7 @@ class HighlighterManager {
     if (!this.highlighters) {
       this.highlighters = await createHighlighter({
         themes: [theme],
-        langs: ["tsx", "bash", lang], //TODO: there is a bug here where it doesn't load the lang
+        langs: ["tsx", "bash","json", lang], //TODO: there is a bug here where it doesn't load the lang
       });
 
       this.loadedThemes.add(theme);

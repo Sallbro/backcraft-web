@@ -1,6 +1,6 @@
 {
-  "name": "aether-ui",
-  "version": "0.1.0",
+  "name": "backcraft-web",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
@@ -57,7 +57,6 @@
     "tsx": "^4.19.3",
     "typescript": "^5"
   },
-  "packageManager": "pnpm@9.15.4",
   "engines": {
     "node": ">=18.0.0"
   }
