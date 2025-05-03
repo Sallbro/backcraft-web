@@ -1,0 +1,31 @@
+import CodeBlock from "@/components/web/code-block";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "List",
+  description: "How to use backcraft-cli init command in your projects.",
+});
+
+# Init command
+
+The `init` command is used to create a new backend project from an existing `app` template in the registry.
+
+## Run the Init Command
+
+<CodeBlock code={`backcraft init`} lang="bash" className="h-[52px]" />
+
+This creates a new sample project based on programming language choose.
+
+## Run the Init Command with specified `app` registry
+
+<CodeBlock code={`backcraft init --name=blog-mongoose`} lang="bash" className="h-[52px]" />
+
+This creates a new project based on the `blog-mongoose.js.json` template located in the `app/{your project name}` folder of your registry.
+
+## Understand the Output
+
+- Initialize new project.
+- You find all registry in backcraft-registry package.
+
+<PrevNextBtn current="init" />

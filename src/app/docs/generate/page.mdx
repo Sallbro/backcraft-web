@@ -1,0 +1,47 @@
+import CodeBlock from "@/components/web/code-block";
+import { srcUrl } from "@/lib/data";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "List",
+  description: "How to install Aether UI in your projects.",
+});
+
+# Generate command
+
+Use the `generate` command to scaffold a new registry `.json` template. This helps in adding custom `app` or `component` templates into your registry easily.
+
+## Run the generate command
+
+<CodeBlock
+  code={`backcraft g json --type=app --name=your-project-name`}
+  lang="bash"
+  className="h-[52px]"
+/>
+
+This generate a json file.
+
+## Available Flags
+
+<Table data={{
+  headers: ["Prop", "Type", "Default", "Description"],
+  rows: [
+    ["type", "string", "app", "Type of template (`app` or `component`)"],
+    ["name", "string (Optional)", "-", "Template file name (without extension)"]
+    ],
+}}>
+
+| Flag     | Description                             | Required |
+| -------- | --------------------------------------- | -------- |
+| `--type` | Type of template (`app` or `component`) | ❌       |
+| `--name` | Template file name (without extension)  | ✅       |
+
+</Table>
+
+## Understand the Output
+
+- Generate JSON file.
+- You can use json file as registry with custom command.
+
+<PrevNextBtn current="generate" />

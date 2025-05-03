@@ -1,0 +1,119 @@
+import ComponentPreview from "@/components/web/component-preview";
+import FuzzyTextDemo from "./fuzzy-text-demo";
+import FuzzyTextDemo2 from "./fuzzy-text-demo-2";
+import FuzzyTextDemo3 from "./fuzzy-text-demo-3";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "Database Setup",
+  description: "Integrate Database Setup",
+});
+
+# Database Setup
+
+Integrate Database Setup.
+
+## MongoDB Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+<InstallationCli value="add stripe-integration" />
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>If you haven't completed the installation refer to guide [here](/docs/installation).</Step>
+
+<Step>
+  Manually create the file and folder structure based on the `mongo-setup` template in the registry.
+</Step>
+
+<Step>
+  Create necessary directories such as `config/` and `models/` inside your project structure.
+</Step>
+
+<Step>
+  Copy the JavaScript code blocks from the template into appropriate files (`config/mongodb.js`,
+  `models/sampleModel.js`, `app.js`).
+</Step>
+
+<Step>Create a `.env` file with your MongoDB URI.</Step>
+
+<Step>Install the required dependencies using:</Step>
+
+<CodeBlock code={`npm install mongoose dotenv`} lang="bash" className="h-[52px]" />
+
+<Step>
+  Start your server and confirm MongoDB connection by checking the console and accessing the root
+  route (`/`).
+</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Mysql Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+<InstallationCli value="add paypal-integration" />
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>If you haven't completed the installation refer to guide [here](/docs/installation).</Step>
+
+<Step>
+  Manually create the file and folder structure based on the `mysql-setup` template in the registry.
+</Step>
+
+<Step>
+  Create necessary directories such as `config/` and `models/` inside your project structure.
+</Step>
+
+<Step>
+  Copy the JavaScript code blocks from the template into appropriate files (`config/mysql.js`,
+  `models/sampleModel.js`, `app.js`).
+</Step>
+
+<Step>Create a `.env` file with your MySQL configuration.</Step>
+
+<Step>Install the required dependencies using:</Step>
+
+<CodeBlock code={`npm install mysql2 dotenv`} lang="bash" className="h-[52px]" />
+
+<Step>
+  Start your server and confirm MySQL connection and table setup by checking the console and
+  accessing the root route (`/`).
+</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+<PrevNextBtn current="db-setup" />

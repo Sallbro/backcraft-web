@@ -1,0 +1,58 @@
+import ComponentPreview from "@/components/web/component-preview";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "Blog Registry",
+  description: "Blog Registry Module",
+});
+
+# Blog Registry
+
+Full-Stack Blog API using Express and MongoDB.
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+<InstallationCli value="init blog-mongoose" />
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>If you haven't completed the installation refer to guide [here](/docs/installation).</Step>
+
+<Step>
+  Manually add the required files to your project using the folder structure and content from the
+  `blog-mongoose.js.json` file in the registry.
+</Step>
+
+<Step>
+  Replicate the structure by creating corresponding folders and files (e.g., `routes/`,
+  `controllers/`, `models/`) inside your project.
+</Step>
+
+<Step>
+  Update any hardcoded paths or environment-specific configs to suit your local project setup (e.g.,
+  database URI, port number, etc.).
+</Step>
+
+<Step>Finally, test the API endpoints (CRUD) for `blogs` using Postman or any REST client.</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+<PrevNextBtn current="blog" />

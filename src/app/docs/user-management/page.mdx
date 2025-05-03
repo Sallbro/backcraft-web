@@ -1,0 +1,66 @@
+import ComponentPreview from "@/components/web/component-preview";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "user management mongo",
+  description: "user management mongo Registry.",
+});
+
+# User Management Registry
+
+fullstack user management app with expres and mongodb.
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+<InstallationCli value="init user-management-mongo" />
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>If you haven't completed the installation refer to guide [here](/docs/installation).</Step>
+
+<Step>
+  Manually create the file and folder structure based on the `user-management-mysql.js.json`
+  template in the registry.
+</Step>
+
+<Step>
+  Create corresponding folders like `routes/`, `controllers/`, `models/`, and `middlewares/` in your
+  project root.
+</Step>
+
+<Step>
+  Paste the route handlers, controller logic, validation, and database models from the template into
+  their respective files.
+</Step>
+
+<Step>
+  Update any config values such as MySQL connection details (host, user, password, database) in your
+  `.env` or `config.js` file.
+</Step>
+
+<Step>
+  Run the migration (if defined), start your server, and test your user management endpoints:
+  register, login, update, delete, etc.
+</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+<PrevNextBtn current="user-management" />

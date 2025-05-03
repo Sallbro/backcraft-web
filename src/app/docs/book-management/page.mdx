@@ -1,0 +1,73 @@
+import ComponentPreview from "@/components/web/component-preview";
+import FuzzyTextDemo from "./fuzzy-text-demo";
+import FuzzyTextDemo2 from "./fuzzy-text-demo-2";
+import FuzzyTextDemo3 from "./fuzzy-text-demo-3";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "book management mongo",
+  description: "book management mongodb registry.",
+});
+
+# Book Management Registry
+
+fullstack book management app with expres and mongodb.
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+<InstallationCli value="init book-management-mongo" />
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>If you haven't completed the installation refer to guide [here](/docs/installation).</Step>
+
+<Step>
+  Manually create the file and folder structure based on the `book-management.ts.json` template in
+  the registry.
+</Step>
+
+<Step>
+  Create necessary directories such as `routes/`, `controllers/`, `models/`, and `services/` inside
+  your project structure.
+</Step>
+
+<Step>
+  Copy the TypeScript code blocks from the template into appropriate files (e.g., `book.routes.ts`,
+  `book.controller.ts`, `book.model.ts`).
+</Step>
+
+<Step>
+  Ensure your project is set up with a TypeScript compiler and proper tsconfig.json configuration.
+</Step>
+
+<Step>
+  Connect to your preferred database (like PostgreSQL with Prisma or MySQL) and adjust any model or
+  service files as needed.
+</Step>
+
+<Step>
+  Test all core operations such as adding, retrieving, updating, and deleting books via the
+  corresponding API endpoints.
+</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+<PrevNextBtn current="book-management" />

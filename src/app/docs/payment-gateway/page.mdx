@@ -1,0 +1,130 @@
+import ComponentPreview from "@/components/web/component-preview";
+import FuzzyTextDemo from "./fuzzy-text-demo";
+import FuzzyTextDemo2 from "./fuzzy-text-demo-2";
+import FuzzyTextDemo3 from "./fuzzy-text-demo-3";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "Payment Gateway Integration",
+  description: "Implement Payment Gateway Integration",
+});
+
+# Payment Gateway Integration
+
+Integrate Payment Gateway Integration.
+
+## Stripe Integration
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+<InstallationCli value="add stripe-integration" />
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>If you haven't completed the installation refer to guide [here](/docs/installation).</Step>
+
+<Step>
+  Manually create the file and folder structure based on the `stripe-integration-js` template in the
+  registry.
+</Step>
+
+<Step>
+  Create necessary directories such as `routes/` and your root `app.js` file inside your project
+  structure.
+</Step>
+
+<Step>
+  Copy the JavaScript code blocks from the template into appropriate files (`app.js`,
+  `routes/stripe.js`).
+</Step>
+
+<Step>Create a `.env` file and add your Stripe credentials.</Step>
+
+<Step>Install the required dependencies using:</Step>
+
+<CodeBlock
+  code={`npm install express dotenv stripe body-parser`}
+  lang="bash"
+  className="h-[52px]"
+/>
+
+<Step>
+  Run the server and test the `/api/stripe/payment` endpoint for successful payment intent creation.
+</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+## Paypal Integration
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+<InstallationCli value="add paypal-integration" />
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>If you haven't completed the installation refer to guide [here](/docs/installation).</Step>
+
+<Step>
+  Manually create the file and folder structure based on the `paypal-integration-js` template in the
+  registry.
+</Step>
+
+<Step>
+  Create necessary directories such as `routes/` and your root `app.js` file inside your project
+  structure.
+</Step>
+
+<Step>
+  Copy the JavaScript code blocks from the template into appropriate files (`app.js`,
+  `routes/paypal.js`).
+</Step>
+
+<Step>Create a `.env` file and add your PayPal sandbox or live credentials.</Step>
+
+<Step>Install the required dependencies using:</Step>
+
+<CodeBlock
+  code={`npm install express dotenv paypal-rest-sdk body-parser`}
+  lang="bash"
+  className="h-[52px]"
+/>
+
+<Step>
+  Run the server and test the `/api/paypal/payment` endpoint to initiate the PayPal transaction
+  flow.
+</Step>
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+<PrevNextBtn current="payment-gateway" />

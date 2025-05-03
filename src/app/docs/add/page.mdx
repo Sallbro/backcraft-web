@@ -1,0 +1,26 @@
+import CodeBlock from "@/components/web/code-block";
+import { srcUrl } from "@/lib/data";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "List",
+  description: "How to install Aether UI in your projects.",
+});
+
+# Add command
+
+The `add` command is used to add new components in an existing `app`.
+
+## Run the add Command with specific regisrty name
+
+<CodeBlock code={`backcraft add auth`} lang="bash" className="h-[52px]" />
+
+This creates a add components in current project directory based on programming language choose.
+
+## Understand the Output
+
+- Add new component in an existing project.
+- You find all registry in backcraft-registry package.
+
+<PrevNextBtn current="init" />

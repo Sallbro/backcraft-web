@@ -1,0 +1,69 @@
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "Authentication",
+  description: "Authentication Registry",
+});
+
+# Authentication
+
+Integrate Authentication.
+
+## Installation
+
+<Tabs defaultValue="cli">
+
+<TabsList>
+  <TabsTrigger value="cli">CLI</TabsTrigger>
+  <TabsTrigger value="manual">Manual</TabsTrigger>
+</TabsList>
+
+<TabsContent value="cli">
+
+<InstallationCli value="add auth" />
+
+</TabsContent>
+
+<TabsContent value="manual">
+
+<Steps>
+
+<Step>
+  If you haven't completed the installation, refer to the guide [here](/docs/installation).
+</Step>
+
+<Step>Generate the project using the following command:</Step>
+
+<CodeBlock code={`backcraft add auth`} lang="bash" className="h-[52px]" />
+
+<Step>
+  Manually create the folder structure and copy content based on the `auth-js` template from the
+  registry.
+</Step>
+
+<Step>Create directories like `routes/`, `controllers/`, `models/`, and a root file `app.js`.</Step>
+
+<Step>Copy each part of the JSON template content into corresponding files:</Step>-
+`routes/posts.js` and `routes/users.js` - `controllers/PostController.js` and
+`controllers/UserController.js` - `models/Post.js` and `models/User.js` - `.env`, `.gitignore`, and
+`app.js`
+
+<Step>
+  Ensure that MongoDB is running locally and your `.env` has the correct URI (`MONGO_URI`).
+</Step>
+
+<Step>Run the app using:</Step>
+
+<CodeBlock code={`nodemon app.js`} lang="bash" className="h-[52px]" />
+
+<Step>Test routes:</Step>- `POST /api/users/register` to create a user - `POST /api/users/login` for
+login - `GET /api/posts/` to fetch posts
+
+</Steps>
+
+</TabsContent>
+
+</Tabs>
+
+<PrevNextBtn current="auth" />

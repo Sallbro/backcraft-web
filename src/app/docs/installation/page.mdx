@@ -1,0 +1,65 @@
+import CodeBlock from "@/components/web/code-block";
+import { srcUrl } from "@/lib/data";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "Installation",
+  description: "How to install Aether UI in your projects.",
+});
+
+# Installation
+
+<Steps>
+
+<Step>Install Backcraft CLI</Step>
+
+Backcraft CLI helps you scaffold backend applications and components using a JSON registry system.
+
+<CodeBlock code={`npm install -g backcraft-cli`} lang="bash" className="h-[52px]" />
+
+<Step>List of Registry Package</Step>
+
+The CLI uses a separate registry to fetch templates. Install the official registry or use your own.
+
+<CodeBlock code={`backcraft list`} lang="bash" className="h-[52px]" />
+
+Make sure it's properly linked or available in your CLI environment.
+
+<Step>Initialize a Project</Step>
+
+To scaffold a full backend app from the registry:
+
+<CodeBlock code={`backcraft init --name=blog-mongoose`} lang="bash" className="h-[52px]" />
+
+This will create a complete project based on the selected template.
+
+<Step>Add a Component</Step>
+
+Once your project is initialized, you can inject additional modules:
+
+<CodeBlock code={`backcraft add stripe-payment`} lang="bash" className="h-[52px]" />
+
+This adds modular code (e.g., payment gateway integration) into your existing app.
+
+<Step>Generate JSON File For Your Project</Step>
+
+Use the built-in integration with [auto-api-doc](https://www.npmjs.com/package/@sallbro/auto-api-doc) to generate API docs:
+
+<CodeBlock code={`backcraft g json`} lang="bash" className="h-[52px]" />
+
+<Step>Bonus Tip</Step>
+
+Generate Documentation using package:
+
+<CodeBlock code={`npm i @sallbro/auto-api-doc`} lang="bash" className="h-[52px]" />
+
+<Step>Contribute To Registry</Step>
+
+You can also contribute your own registry to the backcraft-registry to expand your ecosystem.
+
+<CodeBlock code={`npm i backcraft-registry`} lang="bash" className="h-[52px]" />
+
+</Steps>
+
+<PrevNextBtn current="installation" />

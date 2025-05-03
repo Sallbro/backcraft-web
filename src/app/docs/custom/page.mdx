@@ -1,0 +1,36 @@
+import CodeBlock from "@/components/web/code-block";
+import { srcUrl } from "@/lib/data";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "List",
+  description: "How to install Aether UI in your projects.",
+});
+
+# Custom command
+
+The `custom` command is used to create backend project from custom .json.
+
+## Run the Custom Command
+
+<CodeBlock code={`npx backcraft custom ./path/.json`} lang="bash" className="h-[52px]" />
+
+This creates a project with custom .json.
+
+## Understand the Output
+
+- Initialize and Add new project and components with custom .json file.
+- You find all registry in backcraft-registry package.
+
+## Bonus Tip
+
+Generate your text or task into json using AI, use prompt
+
+```
+create a json file regisrty for backcraft-cli
+```
+
+Then deploy your json file, after use above oneclick custom command to build your whole project in one command
+
+<PrevNextBtn current="custom" />

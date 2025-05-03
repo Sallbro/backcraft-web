@@ -1,0 +1,80 @@
+import CodeBlock from "@/components/web/code-block";
+import { srcUrl } from "@/lib/data";
+import PrevNextBtn from "@/components/web/prev-next-btn";
+import { metaConfig } from "@/config/site";
+
+export const metadata = metaConfig({
+  title: "List",
+  description: "How to use backcraft-cli list command in your projects.",
+});
+
+# List Command
+
+The `list` command shows all available templates in your configured registry. It displays both `app` (project templates) and `component` (modular features) categories.
+
+## Run to view all available registry
+
+To view all available registry:
+
+<CodeBlock code={`backcraft list`} lang="bash" className="h-[52px]" />
+
+This will output a structured object like the following:
+
+<CodeBlock
+  code={`{
+  "app": {
+    "blog": ["blog-mongoose.js.json", "blog-mysql.js.json"],
+    "book": ["book-prisma.ts.json"]
+  },
+  "component": {
+    "auth": ["jwt-auth.js.json", "jwt-auth.mysql.json"],
+    "payment": ["stripe-payment.json", "paypal-payment.json"]
+  }
+}`}
+  lang="json"
+  className="h-fit"
+/>
+
+## Run to view app registry
+
+To view all available app registry:
+
+<CodeBlock code={`backcraft list app`} lang="bash" className="h-[52px]" />
+
+This will output a structured object like the following:
+
+<CodeBlock
+  code={`
+  "app": {
+    "blog": ["blog-mongoose.js.json", "blog-mysql.js.json"],
+    "book": ["book-prisma.ts.json"]
+  }`}
+  lang="json"
+  className="h-fit"
+/>
+
+## Run to view components registry
+
+To view all available components registry:
+
+<CodeBlock code={`backcraft list components`} lang="bash" className="h-[52px]" />
+
+This will output a structured object like the following:
+
+<CodeBlock
+  code={`
+  "component": {
+    "auth": ["jwt-auth.js.json", "jwt-auth.mysql.json"],
+    "payment": ["stripe-payment.json", "paypal-payment.json"]
+  }`}
+  lang="json"
+  className="h-fit"
+/>
+
+## Understand the Output
+
+- Two type of registry use for : `app - Initialize application`, `component - add new components to existing project`.
+- Inside each category are folders (e.g., `blog`, `auth`, `payment`), which organize related templates.
+- Each folder lists `.json` files that can be used with `init` or `add` commands.
+
+<PrevNextBtn current="list" />
