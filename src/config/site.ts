@@ -5,12 +5,13 @@ export const siteConfig = {
   name: "BackCraft",
   url: "https://backcraft.vercel.app/",
   bgImage:
-    "https://res.cloudinary.com/di0av3xly/image/upload/v1744973705/Aether-ui/au-meta-banner_vidmtc.png",
+    "https://res.cloudinary.com/di0av3xly/image/upload/v1744919181/Aether-ui/landing-img_gafup9.avif",
   description:
     "Breathe life into your backend with modular scaffolding. Backcraft CLI empowers developers with beautifully structured registry and plug-and-play components.",
   links: {
     twitter: "#",
     github: "https://github.com/Sallbro/backcraft-cli",
+    linkedin:"https://www.linkedin.com/in/salman-asu-36820a230/",
   },
 };
 
@@ -27,7 +28,7 @@ export interface MetaConfigProps {
   description: string;
 }
 
-const fallbackURL = "https://ui-aether.vercel.app";
+const fallbackURL = "https://backcraft.vercel.app";
 
 /**
  * @param title: Metadata["title"];
@@ -43,11 +44,11 @@ export const metaConfig = ({
   keywords: ["Next.js", "React", "Tailwind CSS", "Motion", "JavaScript", "TypeScript"],
   metadataBase: new URL(siteConfig.url),
   applicationName: siteConfig.name,
-  authors: [{ name: "Aether/ui's Team", url: siteConfig.url }],
-  publisher: "Aether/ui's Team",
+  authors: [{ name: "sallbro - salman asu", url: siteConfig.url }],
+  publisher: "BackCraft",
   alternates: { canonical: fallbackURL },
   twitter: {
-    creator: "@pantharhsit007",
+    creator: "@sallbro",
     title,
     description,
     card: "summary_large_image",
@@ -81,7 +82,7 @@ export const metaConfig = ({
 export const rootSiteConfig = {
   title: {
     default: siteConfig.name,
-    template: "%s | Aether/ui",
+    template: "%s | BackCraft",
   },
   description: siteConfig.description,
   url: siteConfig.url,
@@ -95,11 +96,11 @@ export const rootSiteConfig = {
   keywords: ["Next.js", "React", "Tailwind CSS", "Motion", "JavaScript", "TypeScript"],
   metadataBase: new URL(siteConfig.url),
   applicationName: siteConfig.name,
-  authors: [{ name: "Aether/ui's Team", url: siteConfig.url }],
-  publisher: "Aether/ui's Team",
+  authors: [{ name: "sallbro - salman asu", url: siteConfig.url }],
+  publisher: "BackCraft",
   alternates: { canonical: fallbackURL },
   twitter: {
-    creator: "@pantharhsit007",
+    creator: "@sallbro",
     title: siteConfig.name,
     description: siteConfig.description,
     card: "summary_large_image",
@@ -108,7 +109,7 @@ export const rootSiteConfig = {
         url: siteConfig.bgImage,
         width: 1200,
         height: 630,
-        alt: "Aether/ui Banner",
+        alt: "BackCraft Banner",
       },
     ],
   },
@@ -123,7 +124,7 @@ export const rootSiteConfig = {
         url: siteConfig.bgImage,
         width: 1200,
         height: 630,
-        alt: "Aether/ui Banner",
+        alt: "BackCraft Banner",
       },
     ],
   },

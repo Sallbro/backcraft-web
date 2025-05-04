@@ -1,4 +1,4 @@
-export const srcUrl = process.env.NEXT_PUBLIC_SRC_URL || "https://ui-aether.vercel.app";
+export const srcUrl = process.env.NEXT_PUBLIC_SRC_URL || "https://backcraft.vercel.app/";
 
 export const animeData = [
   {

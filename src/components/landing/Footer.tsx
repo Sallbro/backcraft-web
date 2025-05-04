@@ -30,14 +30,13 @@ export default function Footer() {
               <span className="sr-only">GitHub</span>
             </a>
             <a
-              href={siteConfig.links.twitter}
+              href={siteConfig.links.linkedin}
               target="_blank"
               rel="noreferrer"
               className="text-muted-foreground transition-colors hover:text-white"
             >
-              {/* <XIcon className="h-5 w-5" fill="white" /> */}
               <LinkedinIcon className="h-5 w-5" fill="white" />
-              <span className="sr-only">Twitter</span>
+              <span className="sr-only">Linkedin</span>
             </a>
           </div>
         </div>

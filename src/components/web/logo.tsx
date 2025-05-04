@@ -16,10 +16,6 @@ function Logo({
 }) {
   const { theme } = useTheme();
   const val = defaultTheme ?? theme;
-  // const logo =
-  //   val === "light"
-  //     ? "https://res.cloudinary.com/di0av3xly/image/upload/v1744924578/Aether-ui/au-logo-black.png"
-  //     : "https://res.cloudinary.com/di0av3xly/image/upload/v1744924537/Aether-ui/au-logo-light.png";
   const logo =
     val === "light"
       ? "https://res.cloudinary.com/dtdytcudg/image/upload/v1746208983/LogoWiz_01052025_231841_final_bd6qon.png"
