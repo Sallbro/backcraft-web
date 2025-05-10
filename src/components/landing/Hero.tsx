@@ -61,8 +61,7 @@ function Hero() {
           </div>
 
           <p className="font-bricolage-grotesque text-shadow-glow-2 mx-auto mt-2.5 text-center text-base tracking-tight text-zinc-200 md:w-[70%] md:text-lg">
-            Breathe life into your backend with modular scaffolding. Backcraft CLI empowers
-            developers with beautifully structured registry and plug-and-play components.
+          Backcraft CLI is a powerful, developer-friendly tool to <b>bootstrap express backend applications</b> and <b>plug in modular components</b> instantly using a JSON-based registry.
           </p>
         </motion.div>
 
